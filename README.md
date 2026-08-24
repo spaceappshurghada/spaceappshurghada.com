@@ -1,1 +1,1 @@
-# spaceappshurghada.info
+# spaceappshurghada.com
