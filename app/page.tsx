@@ -72,18 +72,18 @@ export default function NASASpaceAppsHurghada() {
 
     const sponsors: Record<SponsorTierId, Sponsor[]> = {
         gold: [
+            { name: "Codewars Egypt", logo: "/img/collaborators/codewars-logo.png", url: "https://codewarsegypt.com" },
             { name: "Sunrise Resorts & Cruises", logo: "/img/collaborators/sunrise.png", url: "https://www.sunrise-resorts.com" },
             { name: "BlueWaves", logo: "/img/collaborators/bluewaves.png", url: "https://bluewavesegypt.com" },
+            { name: "Egypt Times", logo: "/img/collaborators/egypttimes.png", url: "https://egypttimesvideofilm.com" },
+            { name: "Domty", logo: "/img/collaborators/domty.png", url: "https://www.domty.org" },
         ],
         silver: [
-            // { name: "Hadaf Solutions", logo: "/img/collaborators/hadaf.png", url: "https://hadafsolutions.net" },
+            { name: "Coffee Zain", logo: "/img/collaborators/coffeezain.png", url: "https://www.facebook.com/ElAbedCoffee" },
         ],
-        bronze: [
-
-        ],
+        bronze: [],
         community: [
             { name: "GDG On Campus HUN", logo: "/img/collaborators/gdg-hurghada.png", url: "https://gdg.community.dev/gdg-on-campus-hurghada-faculty-of-computers-artificial-intelligence-hurghada-egypt" },
-            { name: "Codewars egypt", logo: "/img/collaborators/codewars-logo.png", url: "https://codewarsegypt.com" },
             { name: "2Code Academy", logo: "/img/collaborators/2code-academy.png", url: "https://www.facebook.com/profile.php?id=61580494251243" },
             { name: "GDG On Campus SVU", logo: "/img/collaborators/gdg-svu-black.png", url: "https://gdg.community.dev/gdg-on-campus-south-valley-university-qena-egypt" },
         ],
@@ -189,6 +189,13 @@ export default function NASASpaceAppsHurghada() {
             linkedin: "https://linkedin.com/in/jovaney-atef-35b4ab2a4",
         },
         {
+            name: "Alaa Abdullah",
+            role: "Mentors Team",
+            bio: "Alaa Abdullah Mousa - Mentors Team, NASA Space Apps Hurghada",
+            image: "/img/team/alaa_abdullah.png",
+            linkedin: "https://linkedin.com/in/alaa-abdullah-763878282",
+        },
+        {
             name: "Omnia Ahmed",
             role: "Marketing Team",
             bio: "Omnia Ahmed Abdel Rahim - Marketing Team, NASA Space Apps Hurghada",
@@ -222,6 +229,13 @@ export default function NASASpaceAppsHurghada() {
             bio: "Haneen Ali Mohamed - Marketing Team, NASA Space Apps Hurghada",
             image: "/img/team/haneen.png",
             linkedin: "https://linkedin.com/in/haneen-ali-71b91834b",
+        },
+        {
+            name: "Youssef Farouk",
+            role: "Media Team",
+            bio: "Youssef Mohamed Farouk - Media Team, NASA Space Apps Hurghada",
+            image: "/img/team/youssef_farouk.png",
+            linkedin: "https://linkedin.com/in/youssef-farouk-b8a41134a",
         },
         {
             name: "Mariam Ramadan",
@@ -420,18 +434,16 @@ export default function NASASpaceAppsHurghada() {
                                 </div>
                             </div>
                             <div className="mt-10">
-                                <a href="https://www.spaceappschallenge.org/2025/local-events/hurghada" target="_blank">
-                                    <Button className="bg-[#EAFE07] hover:bg-[#EAFE07]/90 text-[#07173F] font-bold text-xl me-0 mb-5 lg:me-5 lg:mb-0 p-8 transition-all duration-300 transform hover:scale-105 rounded-xl">
-                                        Global Registration Open
+                                {/* <a href="https://www.spaceappschallenge.org/2025/local-events/hurghada" target="_blank">
+                                    <Button className="bg-[#EAFE07] hover:bg-[#EAFE07]/90 text-[#07173F] font-bold text-xl me-0 mb-5 lg:me-5 lg:mb-0 p-8 transition-all duration-300 transform hover:scale-105 rounded-xl" disabled>
+                                        Global Registration Closed
                                         <ExternalLink className="w-5 h-5 ml-2" />
                                     </Button>
-                                </a>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScXp6UvcurBi43Mf9W5O4vB1ZDbEenkO5IIoy5e_KeVzEGy0g/viewform" target="_blank">
-                                    <Button className="bg-[#EAFE07] hover:bg-[#EAFE07]/90 text-[#07173F] font-bold text-xl me-0 mb-5 lg:me-5 lg:mb-0 p-8 transition-all duration-300 transform hover:scale-105 rounded-xl">
-                                        Local Registration Open
-                                        <ExternalLink className="w-5 h-5 ml-2" />
-                                    </Button>
-                                </a>
+                                </a> */}                                
+                                <Button className="bg-[#EAFE07] hover:bg-[#EAFE07]/90 text-[#07173F] font-bold text-xl me-0 mb-5 lg:me-5 lg:mb-0 p-8 transition-all duration-300 transform hover:scale-105 rounded-xl cursor-not-allowed" disabled>
+                                    Registration Closed
+                                    <ExternalLink className="w-5 h-5 ml-2" />
+                                </Button>
                             </div>
                         </div>
                     </div>
@@ -618,7 +630,7 @@ export default function NASASpaceAppsHurghada() {
             {/* Sponsors Section */}
             <section id="sponsors" className="py-20" >
                 <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto text-center">
+                    <div className="max-w-7xl mx-auto text-center">
                         <h2 className="font-['Fira_Sans'] font-bold text-3xl md:text-5xl mb-6">Our Sponsors & Partners</h2>
                         <p className="text-lg text-gray-600 mb-16">
                             We thank our amazing collaborators for helping make NASA Space Apps Hurghada possible.
