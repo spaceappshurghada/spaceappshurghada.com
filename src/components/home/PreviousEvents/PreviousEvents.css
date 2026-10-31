@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Previous events — light band, copy left / media gallery right
+   --------------------------------------------------------------------------
+   Card styling lives with the shared SeasonMediaGallery component; this file
+   only owns the homepage section layout and its two-column gallery override.
+   ========================================================================== */
+
+.previous-events {
+  background-color: var(--surface-light);
+  border-bottom: 1px solid var(--border-on-light);
+}
+
+.previous-events-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 56px);
+}
+
+.previous-events-text .section-desc {
+  max-width: 400px;
+}
+
+.previous-events-action {
+  margin-top: 18px;
+}
+
+.previous-events-content {
+  min-width: 0;
+}
+
+/* ---------- Gallery: keep the homepage's two-column rail ---------- */
+
+.season-media-gallery.events-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .previous-events-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .previous-events-text .section-desc {
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .season-media-gallery.events-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

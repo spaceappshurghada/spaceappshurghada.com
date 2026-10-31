@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Sponsors — light band, copy left / grouped logo tiers right
+   --------------------------------------------------------------------------
+   Tier and mark styling lives with the shared SponsorTiers component; this
+   file only owns the homepage section layout.
+   ========================================================================== */
+
+.sponsors {
+  background-color: var(--surface-light-alt);
+  border-bottom: 1px solid var(--border-on-light);
+}
+
+.sponsors-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 60px);
+}
+
+.sponsors-description {
+  max-width: 400px;
+}
+
+.sponsors-action {
+  margin-top: 18px;
+}
+
+.sponsors-content {
+  min-width: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .sponsors-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsors-description {
+    max-width: none;
+  }
+}

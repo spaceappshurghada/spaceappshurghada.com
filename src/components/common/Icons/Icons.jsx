@@ -1,0 +1,404 @@
+/* ==========================================================================
+   Lightweight inline SVG icon set.
+   No icon library dependency: these are a handful of hand-rolled paths so the
+   bundle stays small.
+   All icons are decorative by default (aria-hidden) and inherit `currentColor`.
+   ========================================================================== */
+
+const base = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.6,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": "true",
+  focusable: "false",
+};
+
+export function ArrowRightIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M4 12h15" />
+      <path d="M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M20 12H5" />
+      <path d="M11 6l-6 6 6 6" />
+    </svg>
+  );
+}
+
+/* Trailing arrow leaving a box: the conventional glyph for a link that
+   leaves this site, so external destinations are recognisable without
+   relying on the new-tab behaviour alone. */
+export function ExternalLinkIcon({ size = 16 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M14 4h6v6" />
+      <path d="M20 4l-8.5 8.5" />
+      <path d="M19 14v5a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 19V7.8A1.8 1.8 0 0 1 5.8 6H11" />
+    </svg>
+  );
+}
+
+export function SignalIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none" />
+      <path d="M7.8 16.2a5.9 5.9 0 0 1 0-8.4" />
+      <path d="M16.2 7.8a5.9 5.9 0 0 1 0 8.4" />
+      <path d="M4.9 19.1a10 10 0 0 1 0-14.2" />
+      <path d="M19.1 4.9a10 10 0 0 1 0 14.2" />
+    </svg>
+  );
+}
+
+export function CalendarIcon({ size = 20 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <rect x="3" y="5" width="18" height="16" rx="2.5" />
+      <path d="M3 10h18" />
+      <path d="M8 3v4" />
+      <path d="M16 3v4" />
+    </svg>
+  );
+}
+
+export function MapPinIcon({ size = 20 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M12 21c4.2-4.6 6-7.9 6-10.4A6 6 0 0 0 6 10.6C6 13.1 7.8 16.4 12 21Z" />
+      <circle cx="12" cy="10.4" r="2.4" />
+    </svg>
+  );
+}
+
+export function GlobeIcon({ size = 28 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3c2.6 2.7 2.6 15.3 0 18" />
+      <path d="M12 3c-2.6 2.7-2.6 15.3 0 18" />
+    </svg>
+  );
+}
+
+export function UsersIcon({ size = 28 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="9" cy="8.5" r="3.2" />
+      <path d="M3.2 19.5a5.8 5.8 0 0 1 11.6 0" />
+      <path d="M16.2 5.9a3.2 3.2 0 0 1 0 5.4" />
+      <path d="M17.6 14.4a5.8 5.8 0 0 1 3.2 5.1" />
+    </svg>
+  );
+}
+
+export function RocketIcon({ size = 28 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M12 3c3 2.1 4.6 5.3 4.6 9L12 16.4 7.4 12C7.4 8.3 9 5.1 12 3Z" />
+      <circle cx="12" cy="9.6" r="1.7" />
+      <path d="M9.6 16.2 7 21l4-1.4" />
+      <path d="M14.4 16.2 17 21l-4-1.4" />
+    </svg>
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Standings icons
+   -------------------------------------------------------------------------- */
+
+/* Movement is drawn as an arrow rather than a triangle so it stays legible at
+   the small size it appears in the standings table. */
+export function TrendUpIcon({ size = 14 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M6 18 18 6" />
+      <path d="M9.5 6H18v8.5" />
+    </svg>
+  );
+}
+
+export function TrendDownIcon({ size = 14 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M6 6l12 12" />
+      <path d="M18 9.5V18H9.5" />
+    </svg>
+  );
+}
+
+export function CrownIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M4 17h16" />
+      <path d="M4 17 3 7.5l4.6 3.2L12 5l4.4 5.7L21 7.5 20 17" />
+    </svg>
+  );
+}
+
+/* Two figures: distinct from UsersIcon, which shows a single person plus a
+   second partial figure, and used where a *group* of teams is meant. */
+export function TeamIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="8.5" cy="8" r="2.8" />
+      <circle cx="16.5" cy="9.5" r="2.2" />
+      <path d="M3.5 18a5 5 0 0 1 10 0" />
+      <path d="M14.5 18a3.6 3.6 0 0 1 6-1.7" />
+    </svg>
+  );
+}
+
+export function ChartIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M4 20V4" />
+      <path d="M4 20h16" />
+      <path d="M8.5 20v-6" />
+      <path d="M13 20v-9" />
+      <path d="M17.5 20v-4" />
+    </svg>
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Challenges icons
+   -------------------------------------------------------------------------- */
+
+export function SearchIcon({ size = 16 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="m16.2 16.2 4.3 4.3" />
+    </svg>
+  );
+}
+
+export function GridIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.6" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.6" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" />
+    </svg>
+  );
+}
+
+export function LeafIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+    </svg>
+  );
+}
+
+/* Ringed planet: a plain circle reads as a dot at small sizes, so the tilted
+   orbit ring is what carries the "space exploration" meaning. */
+export function PlanetIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="12" cy="12" r="5.6" />
+      <ellipse cx="12" cy="12" rx="10.2" ry="3.9" transform="rotate(-24 12 12)" />
+    </svg>
+  );
+}
+
+export function GearIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <circle cx="12" cy="12" r="4.3" />
+      <path d="M12 4.2V6.9M12 17.1v2.7M4.2 12H6.9M17.1 12h2.7M6.5 6.5l1.9 1.9M15.6 15.6l1.9 1.9M17.5 6.5l-1.9 1.9M8.4 15.6l-1.9 1.9" />
+    </svg>
+  );
+}
+
+export function HeartIcon({ size = 15 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    </svg>
+  );
+}
+
+/* Three ascending bars: difficulty reads as "how much of the scale is filled",
+   which a line chart at 12-14px cannot show. */
+export function BarsIcon({ size = 14 }) {
+  return (
+    <svg {...base} width={size} height={size} strokeWidth={2}>
+      <path d="M5 19v-3.6" />
+      <path d="M12 19v-7.4" />
+      <path d="M19 19V8" />
+    </svg>
+  );
+}
+
+export function MenuIcon({ size = 22 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ size = 22 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M6 6l12 12" />
+      <path d="M18 6L6 18" />
+    </svg>
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Login page icons
+   -------------------------------------------------------------------------- */
+
+/* Balance scales: the beam plus two hanging pans reads as "judging" at small
+   sizes, where a single-pan balance would not. */
+export function ScaleIcon({ size = 20 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M12 4.5V20" />
+      <path d="M8 20h8" />
+      <path d="M4.5 7.5h15" />
+      <path d="M4.5 7.5 2.4 12a3.4 3.4 0 0 0 4.2 0Z" />
+      <path d="M19.5 7.5 17.4 12a3.4 3.4 0 0 0 4.2 0Z" />
+    </svg>
+  );
+}
+
+export function LightbulbIcon({ size = 20 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M12 3a6.2 6.2 0 0 0-3.4 11.35c.75.5 1.2 1.3 1.2 2.15V17h4.4v-.5c0-.85.45-1.65 1.2-2.15A6.2 6.2 0 0 0 12 3Z" />
+      <path d="M9.5 19.5h5" />
+      <path d="M10.5 21.5h3" />
+    </svg>
+  );
+}
+
+export function MailIcon({ size = 17 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <rect x="3" y="5.5" width="18" height="13" rx="2" />
+      <path d="m3.8 7.5 7.1 5.1a1.8 1.8 0 0 0 2.2 0l7.1-5.1" />
+    </svg>
+  );
+}
+
+export function LockIcon({ size = 17 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <rect x="4.5" y="10.5" width="15" height="9.5" rx="2" />
+      <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" />
+      <path d="M12 14.4v2.2" />
+    </svg>
+  );
+}
+
+export function EyeIcon({ size = 17 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+}
+
+/* Open eye crossed by a single diagonal: the slash is what distinguishes the
+   "hidden" state from EyeIcon at the 16-17px size it appears at. */
+export function EyeOffIcon({ size = 17 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M3 3l18 18" />
+      <path d="M10.6 6.2A10.9 10.9 0 0 1 12 6c6 0 9.5 6 9.5 6a17.3 17.3 0 0 1-3.4 4.1" />
+      <path d="M6.6 8.3A16.9 16.9 0 0 0 2.5 12s3.5 6 9.5 6a10.6 10.6 0 0 0 3.6-.62" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+    </svg>
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Social icons (solid glyphs)
+   -------------------------------------------------------------------------- */
+
+export function XIcon({ size = 18 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M18.244 2H21.5l-7.1 8.11L22.75 22h-6.54l-5.12-6.7L5.2 22H1.94l7.6-8.68L1.5 2h6.7l4.63 6.12L18.244 2Zm-1.14 18h1.8L7 3.9H5.07L17.104 20Z" />
+    </svg>
+  );
+}
+
+export function LinkedInIcon({ size = 18 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.05c.53-1 1.84-2.04 3.78-2.04 4.04 0 4.79 2.66 4.79 6.12V21h-4v-4.69c0-1.12-.02-2.56-1.56-2.56-1.56 0-1.8 1.22-1.8 2.48V21h-4V9.75Z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ size = 18 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+    </svg>
+  );
+}
+
+export function YouTubeIcon({ size = 18 }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2C2 8.78 2 12 2 12s0 3.22.4 4.8a2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77C22 15.22 22 12 22 12s0-3.22-.4-4.8ZM10 15V9l5.2 3L10 15Z" />
+    </svg>
+  );
+}
+/* Confirmation glyph for the judge score-submission success banner. */
+export function CheckIcon({ size = 18 }) {
+  return (
+    <svg {...base} width={size} height={size}>
+      <path d="M4.5 12.5l5 5 10-11" />
+    </svg>
+  );
+}
